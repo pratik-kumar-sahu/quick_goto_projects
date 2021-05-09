@@ -1,0 +1,26 @@
+.App {
+}
+
+.header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: palevioletred;
+}
+
+.header-links {
+  font-family: "Itim";
+  font-size: 1.4rem;
+  margin-left: 3rem;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+}
+
+.header-login {
+  font-family: "Itim";
+  font-size: 1.4rem;
+  margin-right: 3rem;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+}
