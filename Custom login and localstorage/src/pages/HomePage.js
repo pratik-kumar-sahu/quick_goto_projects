@@ -11,6 +11,7 @@ function HomePage() {
       dispatch({
         type: "LOGOUT",
       });
+      localStorage.removeItem("CurrentUser");
     });
   };
 
@@ -31,6 +32,24 @@ function HomePage() {
           </Link>
         </>
       )}
+      <div style={{ marginTop: "2rem" }}>
+        <li>After user sign-in only, data gets stored in localStorage</li>
+        <li>Profile is accessible only if user is signed in</li>
+        <li>User's data gets removed from localStorage on Logout</li>
+        <li>Use Dummy credentials 👇 or SignUp</li>
+        <li>
+          Email: <strong>hermoine@gmail.com</strong> and Password:{" "}
+          <strong>hermoine@123</strong>
+        </li>
+        <li>
+          Email: <strong>ron@gmail.com</strong> and Password:{" "}
+          <strong>ron@123</strong>
+        </li>
+        <li>
+          Email: <strong>rachel@gmail.com</strong> and Password:{" "}
+          <strong>rachel@123</strong>
+        </li>
+      </div>
     </div>
   );
 }

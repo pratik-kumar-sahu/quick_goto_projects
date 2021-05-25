@@ -16,20 +16,16 @@ function Signup() {
       auth
         .createUserWithEmailAndPassword(email, password)
         .then((res) => {
-          if (res) {
-            res = auth.currentUser;
-            res.updateProfile({
-              displayName: name,
-              photoURL: `https://ui-avatars.com/api/?name=${name}`,
-            });
-          }
-          if (res) {
-            console.log(res);
-            dispatch({
-              type: "VERIFY_USER",
-              user: res,
-            });
-          }
+          res = auth.currentUser;
+          res.updateProfile({
+            displayName: name,
+            photoURL: `https://ui-avatars.com/api/?name=${name}`,
+          });
+
+          dispatch({
+            type: "VERIFY_USER",
+            user: res,
+          });
         })
         .catch((err) => console.log(err));
     }
@@ -41,6 +37,7 @@ function Signup() {
   return (
     <>
       <div>
+        <h3>SignUp</h3>
         <form onSubmit={submitHandler}>
           <input
             type="text"

@@ -20,6 +20,7 @@ function Login() {
             type: "VERIFY_USER",
             user: res.user,
           });
+          localStorage.setItem("CurrentUser", JSON.stringify(res.user));
         })
         .catch((err) => console.log(err));
     }
@@ -30,6 +31,7 @@ function Login() {
   return (
     <>
       <div>
+        <h3>LogIn</h3>
         <form onSubmit={submitHandler}>
           <input
             type="email"
