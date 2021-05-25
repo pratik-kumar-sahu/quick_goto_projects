@@ -48,7 +48,7 @@ function Login() {
           <button type="submit">Submit</button>
         </form>
       </div>
-      {user && <Redirect to="/profile" />}
+      {user && <Redirect to="/" />}
     </>
   );
 }
