@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { auth } from "../firebase";
 
@@ -48,7 +48,7 @@ function Login() {
           <button type="submit">Submit</button>
         </form>
       </div>
-      {user ? <Link to="/profile">Profile is Accessible</Link> : null}
+      {user && <Redirect to="/profile" />}
     </>
   );
 }
