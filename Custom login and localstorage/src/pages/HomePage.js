@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { auth } from "../firebase";
 
 function HomePage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const { user, dispatch } = useContext(UserContext);
 
   const logoutUser = () => {
@@ -13,6 +16,30 @@ function HomePage() {
       });
       localStorage.removeItem("CurrentUser");
     });
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (email.trim() && password.trim() && name.trim()) {
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((res) => {
+          res = auth.currentUser;
+          res.updateProfile({
+            displayName: name,
+            photoURL: `https://ui-avatars.com/api/?name=${name}`,
+          });
+
+          dispatch({
+            type: "VERIFY_USER",
+            user: res,
+          });
+        })
+        .catch((err) => console.log(err));
+    }
+    setEmail("");
+    setPassword("");
+    setName("");
   };
 
   return (
@@ -27,9 +54,67 @@ function HomePage() {
           <Link to="/login">
             <button>LogIn</button>
           </Link>
-          <Link to="/signup">
+          {/* <Link to="/signup">
             <button>SignUp</button>
-          </Link>
+          </Link> */}
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#myModal"
+          >
+            SignUp
+          </button>
+
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                  <h4 class="modal-title">SignUp</h4>
+                </div>
+                <div class="modal-body">
+                  <div>
+                    <form onSubmit={submitHandler}>
+                      <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Enter Name"
+                        required
+                      />
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter email"
+                        required
+                      />
+                      <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Enter password"
+                        required
+                      />
+                      <button type="submit">Submit</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-default"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </>
       )}
       <div style={{ marginTop: "2rem" }}>
