@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+.todo-span {
+  background-color: palevioletred;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
