@@ -1,5 +1,8 @@
-var CACHE_STATIC = "static";
-var CACHE_DYNAMIC = "dynamic";
+var CACHE_STATIC = "static-v3";
+var CACHE_DYNAMIC = "dynamic-v3";
+
+// Cache Versioning
+var whiteListed = [CACHE_STATIC, CACHE_DYNAMIC];
 
 var urlsToCache = [
   "/",
@@ -19,8 +22,20 @@ self.addEventListener("install", function (e) {
   );
 });
 
+// Handling Cache Versioning // new versions will only be present and deletes old caches
 self.addEventListener("activate", function (e) {
   console.log("SW activated");
+  e.waitUntil(
+    caches.keys().then(function (cacheNames) {
+      return Promise.all(
+        cacheNames.map(function (cacheName) {
+          if (whiteListed.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
 });
 
 // Cache then Network strategy
