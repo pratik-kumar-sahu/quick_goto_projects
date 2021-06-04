@@ -23,25 +23,46 @@ self.addEventListener("activate", function (e) {
   console.log("SW activated");
 });
 
-// Cache with Network callback
+// Cache then Network strategy
 self.addEventListener("fetch", function (e) {
   e.respondWith(
-    caches.match(e.request).then(function (res) {
-      if (res) {
-        return res;
-      } else {
+    caches
+      .open(CACHE_DYNAMIC)
+      .then(function (cache) {
         return fetch(e.request).then(function (res) {
-          return caches.open(CACHE_DYNAMIC).then(function (cache) {
-            cache.put(e.request.url, res.clone());
-            return res;
-          });
+          cache.put(e.request.url, res.clone());
+          return res;
         });
-      }
-    })
+      })
+      .catch(function (err) {
+        console.log(err);
+        return caches.match(e.request);
+        // or we can show an offline page here like this
+        // return caches.match('/offline.html')
+        // remember to include '/offline.html' in urlsToCache
+      })
   );
 });
 
-// Network with Cache Fallback
+// Cache with Network Fallback strategy
+// self.addEventListener("fetch", function (e) {
+//   e.respondWith(
+//     caches.match(e.request).then(function (res) {
+//       if (res) {
+//         return res;
+//       } else {
+//         return fetch(e.request).then(function (res) {
+//           return caches.open(CACHE_DYNAMIC).then(function (cache) {
+//             cache.put(e.request.url, res.clone());
+//             return res;
+//           });
+//         });
+//       }
+//     })
+//   );
+// });
+
+// Network with Cache Fallback strategy
 // self.addEventListener("fetch", function (e) {
 //   e.respondWith(fetch(e.request))
 //     .then(function (res) {
