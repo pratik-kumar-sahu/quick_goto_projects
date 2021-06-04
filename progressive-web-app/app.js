@@ -8,3 +8,12 @@ if ("serviceWorker" in navigator) {
       console.log(err);
     });
 }
+
+// unregistering serviceWorker after 10 seconds automatically
+setTimeout(() => {
+  navigator.serviceWorker.getRegistrations().then(function (registrations) {
+    for (let registration of registrations) {
+      registration.unregister();
+    }
+  });
+}, 10000);
