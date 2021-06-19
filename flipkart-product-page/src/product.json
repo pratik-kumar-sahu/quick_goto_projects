@@ -1,0 +1,56 @@
+[
+  {
+    "_id": 1,
+    "name": "LiteRunner W Running Shoes For Women",
+    "image": "https://rukminim1.flixcart.com/image/800/960/koixwnk0/shoe/8/g/u/7-hkk22-adidas-stone-acimin-original-imag2yk9d4unfvvx.jpeg?q=50",
+    "price": 1449,
+    "size": [4, 5, 6, 7],
+    "brand": "Adidas",
+    "ideal": ["Men", "Women"]
+  },
+  {
+    "_id": 2,
+    "name": "SC0620G Canvas Shoes For Men",
+    "image": "https://rukminim1.flixcart.com/image/800/960/k3dc7m80pkrrdj/shoe/k/k/d/10-sc0620g-sparx-original-imafm2sxjzwzydyr.jpeg?q=50",
+    "price": 999,
+    "size": [6, 7, 8],
+    "brand": "Sparx",
+    "ideal": ["Men"]
+  },
+  {
+    "_id": 3,
+    "name": "LiteRunner W Running Shoes For Women",
+    "image": "https://rukminim1.flixcart.com/image/800/960/koixwnk0/shoe/8/g/u/7-hkk22-adidas-stone-acimin-original-imag2yk9d4unfvvx.jpeg?q=50",
+    "price": 1449,
+    "size": [4, 5, 6, 7],
+    "brand": "Adidas",
+    "ideal": ["Women"]
+  },
+  {
+    "_id": 4,
+    "name": "SC0620G Canvas Shoes For Men",
+    "image": "https://rukminim1.flixcart.com/image/800/960/k3dc7m80pkrrdj/shoe/k/k/d/10-sc0620g-sparx-original-imafm2sxjzwzydyr.jpeg?q=50",
+    "price": 999,
+    "size": [6, 7, 8],
+    "brand": "Sparx",
+    "ideal": ["Men"]
+  },
+  {
+    "_id": 5,
+    "name": "LiteRunner W Running Shoes For Women",
+    "image": "https://rukminim1.flixcart.com/image/800/960/koixwnk0/shoe/8/g/u/7-hkk22-adidas-stone-acimin-original-imag2yk9d4unfvvx.jpeg?q=50",
+    "price": 1449,
+    "size": [4, 5, 6, 7],
+    "brand": "Adidas",
+    "ideal": ["Women"]
+  },
+  {
+    "_id": 6,
+    "name": "SC0620G Canvas Shoes For Men",
+    "image": "https://rukminim1.flixcart.com/image/800/960/k3dc7m80pkrrdj/shoe/k/k/d/10-sc0620g-sparx-original-imafm2sxjzwzydyr.jpeg?q=50",
+    "price": 999,
+    "size": [6, 7, 8],
+    "brand": "Sparx",
+    "ideal": ["Women", "Kids"]
+  }
+]

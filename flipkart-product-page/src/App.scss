@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.app {
+  font-family: sans-serif;
+  // text-align: center;
+  display: flex;
+
+  &__left {
+    width: 15%;
+    min-width: 10rem;
+    height: 100vh;
+    padding: 1rem;
+    background-color: grey;
+  }
+
+  &__right {
+    width: 85%;
+    height: 100vh;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: white;
+  }
+}
+
+.productCard {
+  width: 22rem;
+  // height: 25rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+
+  &__img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 1rem;
+
+    &-brand {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 0.2rem 0;
+      color: grey;
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 0.2rem 0;
+    }
+
+    &-price {
+      font-weight: 600;
+      color: rgb(73, 73, 73);
+    }
+
+    &-size {
+      padding: 0.2rem;
+      display: flex;
+      align-items: center;
+
+      &--item {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.2rem;
+        background-color: royalblue;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1),
+      -2px -2px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+button {
+  cursor: pointer;
+}
