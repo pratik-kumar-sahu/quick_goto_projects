@@ -1,0 +1,56 @@
+[
+  {
+    "_id": 1,
+    "name": "LiteRunner W Running Shoes For Women",
+    "image": "https://rukminim1.flixcart.com/image/800/960/koixwnk0/shoe/8/g/u/7-hkk22-adidas-stone-acimin-original-imag2yk9d4unfvvx.jpeg?q=50",
+    "price": 1449,
+    "brand": "Adidas",
+    "ideal": ["Men", "Women"],
+    "qty": 1
+  },
+  {
+    "_id": 2,
+    "name": "SC0620G Canvas Shoes For Men",
+    "image": "https://rukminim1.flixcart.com/image/800/960/k3dc7m80pkrrdj/shoe/k/k/d/10-sc0620g-sparx-original-imafm2sxjzwzydyr.jpeg?q=50",
+    "price": 999,
+    "brand": "Sparx",
+    "ideal": ["Men"],
+    "qty": 1
+  },
+  {
+    "_id": 3,
+    "name": "Rider-01 White Running Shoes",
+    "image": "https://rukminim1.flixcart.com/image/800/960/ki7qw7k0-0/shoe/9/d/t/rider-01cskywht-7-asian-white-original-imafyfxhb5rg6xzx.jpeg?q=50",
+    "price": 1439,
+    "brand": "Asian",
+    "ideal": ["Women", "Men"],
+    "qty": 1
+  },
+  {
+    "_id": 4,
+    "name": "SOCKS Running Shoes",
+    "image": "https://rukminim1.flixcart.com/image/800/960/kd69z0w0/shoe/g/6/m/socks-04-grey-density-grey-original-imafu4xyfffefd3z.jpeg?q=50",
+    "price": 424,
+    "brand": "Density",
+    "ideal": ["Men"],
+    "qty": 1
+  },
+  {
+    "_id": 5,
+    "name": "VERTIGO BLK RUNNING SHOES",
+    "image": "https://rukminim1.flixcart.com/image/800/960/jpinjbk0/shoe/8/h/4/ar4840-010-9-lotto-black-original-imaewa2sjfnjh6up.jpeg?q=50",
+    "price": 849,
+    "brand": "Loto",
+    "ideal": ["Women", "Men"],
+    "qty": 1
+  },
+  {
+    "_id": 6,
+    "name": "Zone XT Wns Training & Gym Shoes",
+    "image": "https://rukminim1.flixcart.com/image/800/960/kpr8k280/shoe/j/s/h/3-193031-3-puma-white-black-yellow-alert-original-imag3wu6rmgzvsyh.jpeg?q=50",
+    "price": 2676,
+    "brand": "Puma",
+    "ideal": ["Women", "Kids"],
+    "qty": 1
+  }
+]

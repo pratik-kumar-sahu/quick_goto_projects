@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.app {
+  font-family: sans-serif;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.productCard {
+  width: 22rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+
+  &__img {
+    width: 100%;
+    height: 15rem;
+    object-fit: contain;
+  }
+
+  &__content {
+    padding: 1rem;
+
+    &-brand {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 0.2rem 0;
+      color: grey;
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 0.2rem 0;
+    }
+
+    &-extras {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &--price {
+        margin-bottom: 0.4rem;
+        font-weight: 600;
+        color: rgb(73, 73, 73);
+      }
+
+      &--addCart {
+        padding: 0.2rem 0.5rem;
+        cursor: pointer;
+        border-radius: 0.2rem;
+        align-self: flex-start;
+        color: white;
+        background-color: royalblue;
+      }
+    }
+
+    &-size {
+      padding: 0.2rem;
+      display: flex;
+      align-items: center;
+
+      &--item {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.2rem;
+        background-color: royalblue;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1),
+      -2px -2px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.header {
+  width: 40rem;
+  height: 3rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: sandybrown;
+
+  &__home {
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 2rem;
+  }
+
+  &__num {
+    font-weight: 600;
+  }
+}
+
+.cart {
+  width: 40rem;
+  height: 20rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: royalblue;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: white;
+
+    &-img {
+      width: 8rem;
+      margin-right: 1rem;
+    }
+
+    &-btn {
+      font-weight: 600;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.saveLater {
+  width: 40rem;
+  height: 15rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: salmon;
+}
+
+button {
+  cursor: pointer;
+}
+
+.counters {
+  cursor: pointer;
+}
